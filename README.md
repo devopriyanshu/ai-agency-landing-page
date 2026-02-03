@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Agent Studio
 
-## Getting Started
+A production-ready, enterprise-grade Next.js website for an AI Agent Engineering Studio. Built with modern web technologies and optimized for performance, SEO, and scalability.
 
-First, run the development server:
+## 🚀 Features
 
+- **Modern Tech Stack**: Next.js 14+ with App Router, TypeScript, Tailwind CSS
+- **SEO Optimized**: Server-side rendering, metadata API, sitemap, robots.txt
+- **Responsive Design**: Mobile-first approach with beautiful UI
+- **Modular Architecture**: Feature-based structure for easy maintenance
+- **Type-Safe**: Full TypeScript implementation
+- **Accessible**: Built with accessibility best practices
+- **Performance**: Optimized images, fonts, and Core Web Vitals
+
+## 📦 Tech Stack
+
+- **Framework**: Next.js 14+ (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui + Radix UI
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd ai-agency
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Create environment file:
+```bash
+cp .env.local.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+/app
+  /(marketing)       # Marketing pages (home, about, services, etc.)
+  /(content)         # Content pages (blog, case studies)
+  /(legal)           # Legal pages (privacy, terms)
+  /api               # API routes
+/components
+  /ui                # shadcn/ui components
+  /layout            # Layout components (Header, Footer)
+  /sections          # Page sections (Hero, Services, etc.)
+  /common            # Reusable components
+/lib                 # Utilities and configurations
+/types               # TypeScript type definitions
+/public              # Static assets
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚢 Deployment
 
-## Deploy on Vercel
+### Vercel (Recommended)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push your code to GitHub
+2. Import project in Vercel
+3. Configure environment variables
+4. Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Other Platforms
+
+Build the production bundle:
+```bash
+npm run build
+npm start
+```
+
+## 📝 Content Management
+
+The project is structured to easily integrate with a CMS:
+
+- Blog posts: `/app/(content)/blog`
+- Case studies: `/app/(content)/case-studies`
+
+Replace placeholder content with your CMS data.
+
+## 🎨 Customization
+
+### Colors
+
+Edit `app/globals.css` to customize the color scheme.
+
+### Content
+
+Update constants in `lib/constants.ts`:
+- Site configuration
+- Services
+- Use cases
+- Tech stack
+- Process steps
+
+### Components
+
+All components are in `/components` and can be customized as needed.
+
+## 📧 Contact Form
+
+The contact form uses a Next.js API route (`/app/api/contact/route.ts`). To enable email sending:
+
+1. Choose an email service (Resend, SendGrid, etc.)
+2. Add API key to `.env.local`
+3. Implement email sending in the API route
+
+## 🔒 Security
+
+- Security headers configured in `next.config.js`
+- Form validation and spam protection
+- Environment variables for sensitive data
+
+## 📊 SEO
+
+- Dynamic metadata generation
+- Sitemap.xml generation
+- Robots.txt configuration
+- OpenGraph and Twitter cards
+- JSON-LD schema support
+
+## 🧪 Testing
+
+```bash
+# Build test
+npm run build
+
+# Type checking
+npm run type-check
+```
+
+## 📄 License
+
+This project is proprietary and confidential.
+
+## 🤝 Support
+
+For questions or support, contact: hello@aiagent.studio
+# ai-agency-landing-page
